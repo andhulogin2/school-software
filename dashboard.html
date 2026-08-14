@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dashboard - EduCore School Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="assets/app.css" rel="stylesheet"/>
+<script id="tailwind-config">
+tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "primary-fixed": "#d8e3fb", "surface-container-high": "#e6e8ea", "surface-dim": "#d8dadc",
+                "tertiary-container": "#422000", "on-secondary-fixed": "#002114", "on-tertiary-fixed-variant": "#6e3900",
+                "tertiary": "#240f00", "on-surface": "#191c1e", "on-secondary": "#ffffff", "background": "#f7f9fb",
+                "on-tertiary-fixed": "#2f1500", "on-surface-variant": "#45474c", "on-primary-fixed-variant": "#3c475a",
+                "on-background": "#191c1e", "on-primary-container": "#8590a6", "surface-tint": "#545f73",
+                "surface-container-lowest": "#ffffff", "surface-container-highest": "#e0e3e5", "surface-container-low": "#f2f4f6",
+                "on-error-container": "#93000a", "on-secondary-fixed-variant": "#005137", "surface": "#f7f9fb",
+                "on-tertiary": "#ffffff", "primary-fixed-dim": "#bcc7de", "on-primary": "#ffffff",
+                "on-secondary-container": "#00714e", "on-tertiary-container": "#d97705", "outline": "#75777d",
+                "secondary": "#006c4a", "inverse-primary": "#bcc7de", "surface-variant": "#e0e3e5",
+                "secondary-container": "#82f5c1", "primary": "#091426", "outline-variant": "#c5c6cd",
+                "surface-bright": "#f7f9fb", "tertiary-fixed-dim": "#ffb77d", "secondary-fixed": "#85f8c4",
+                "error-container": "#ffdad6", "inverse-on-surface": "#eff1f3", "tertiary-fixed": "#ffdcc3",
+                "on-primary-fixed": "#111c2d", "primary-container": "#1e293b", "error": "#ba1a1a",
+                "secondary-fixed-dim": "#68dba9", "on-error": "#ffffff", "inverse-surface": "#2d3133",
+                "surface-container": "#eceef0"
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+            spacing: { md: "16px", "grid-gutter": "20px", xs: "4px", "grid-margin": "24px", sm: "12px", lg: "24px", xl: "32px", base: "8px" },
+            fontFamily: {
+                "body-lg": ["Inter"], "headline-md": ["Inter"], "body-md": ["Inter"], "label-md": ["Inter"],
+                "headline-xl": ["Inter"], "headline-lg": ["Inter"], "data-tabular": ["Inter"], "headline-lg-mobile": ["Inter"]
+            },
+            fontSize: {
+                "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                "headline-md": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+                "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+                "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600" }],
+                "headline-xl": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "600" }],
+                "data-tabular": ["14px", { lineHeight: "20px", fontWeight: "500" }],
+                "headline-lg-mobile": ["24px", { lineHeight: "32px", fontWeight: "600" }]
+            }
+        }
+    }
+}
+</script>
+
+</head>
+<body class="bg-background text-on-background font-body-lg" data-page="dashboard" >
+<div class="flex min-h-screen">
+  <div id="sidebar-root"></div>
+  <div class="flex-1 min-w-0 flex flex-col">
+    <div id="header-root"></div>
+    <main class="flex-1 p-4 lg:p-6 max-w-[1600px] w-full mx-auto">
+
+  
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+      <div>
+        <h2 class="font-headline-md text-headline-md text-on-surface">Welcome back, Anjali</h2>
+        <p class="text-body-md font-body-md text-on-surface-variant mt-1">Here's what's happening across your school today.</p>
+      </div>
+      <div class="flex items-center gap-2 shrink-0"><a href="student-add.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-secondary text-on-secondary text-label-md text-label-md hover:bg-on-secondary-fixed-variant transition-colors shadow-sm"><span class="material-symbols-outlined text-[18px]">person_add</span>Add Student</a></div>
+    </div>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+    <div class="elevation-1 rounded-xl bg-surface-container-lowest border border-outline-variant/50 p-4">
+      <div class="flex items-center justify-between">
+        <div class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">group</span></div>
+        <span class="text-[12px] font-semibold text-on-secondary-container">+3.2%</span>
+      </div>
+      <div class="mt-3 font-headline-lg text-headline-lg text-on-surface">1,284</div>
+      <div class="text-body-md font-body-md text-on-surface-variant">Total Students</div>
+    </div>
+    <div class="elevation-1 rounded-xl bg-surface-container-lowest border border-outline-variant/50 p-4">
+      <div class="flex items-center justify-between">
+        <div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">person</span></div>
+        <span class="text-[12px] font-semibold text-on-secondary-container">+1</span>
+      </div>
+      <div class="mt-3 font-headline-lg text-headline-lg text-on-surface">76</div>
+      <div class="text-body-md font-body-md text-on-surface-variant">Total Teachers</div>
+    </div>
+    <div class="elevation-1 rounded-xl bg-surface-container-lowest border border-outline-variant/50 p-4">
+      <div class="flex items-center justify-between">
+        <div class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">badge</span></div>
+        
+      </div>
+      <div class="mt-3 font-headline-lg text-headline-lg text-on-surface">112</div>
+      <div class="text-body-md font-body-md text-on-surface-variant">Total Staff</div>
+    </div>
+    <div class="elevation-1 rounded-xl bg-surface-container-lowest border border-outline-variant/50 p-4">
+      <div class="flex items-center justify-between">
+        <div class="w-10 h-10 rounded-lg bg-tertiary-container/10 text-on-tertiary-container flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">meeting_room</span></div>
+        
+      </div>
+      <div class="mt-3 font-headline-lg text-headline-lg text-on-surface">42</div>
+      <div class="text-body-md font-body-md text-on-surface-variant">Total Classes</div>
+    </div>
+    <div class="elevation-1 rounded-xl bg-surface-container-lowest border border-outline-variant/50 p-4">
+      <div class="flex items-center justify-between">
+        <div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">fact_check</span></div>
+        <span class="text-[12px] font-semibold text-on-secondary-container">+0.8%</span>
+      </div>
+      <div class="mt-3 font-headline-lg text-headline-lg text-on-surface">94.6%</div>
+      <div class="text-body-md font-body-md text-on-surface-variant">Today's Attendance</div>
+    </div>
+    <div class="elevation-1 rounded-xl bg-surface-container-lowest border border-outline-variant/50 p-4">
+      <div class="flex items-center justify-between">
+        <div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">payments</span></div>
+        <span class="text-[12px] font-semibold text-on-secondary-container">+12%</span>
+      </div>
+      <div class="mt-3 font-headline-lg text-headline-lg text-on-surface">₹ 8.4L</div>
+      <div class="text-body-md font-body-md text-on-surface-variant">Fees Collected (MTD)</div>
+    </div>
+    <div class="elevation-1 rounded-xl bg-surface-container-lowest border border-outline-variant/50 p-4">
+      <div class="flex items-center justify-between">
+        <div class="w-10 h-10 rounded-lg bg-error-container text-on-error-container flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">receipt_long</span></div>
+        <span class="text-[12px] font-semibold text-error">-4%</span>
+      </div>
+      <div class="mt-3 font-headline-lg text-headline-lg text-on-surface">₹ 1.9L</div>
+      <div class="text-body-md font-body-md text-on-surface-variant">Pending Fees</div>
+    </div>
+    <div class="elevation-1 rounded-xl bg-surface-container-lowest border border-outline-variant/50 p-4">
+      <div class="flex items-center justify-between">
+        <div class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center"><span class="material-symbols-outlined text-[20px]">person_add</span></div>
+        <span class="text-[12px] font-semibold text-on-secondary-container">+5</span>
+      </div>
+      <div class="mt-3 font-headline-lg text-headline-lg text-on-surface">18</div>
+      <div class="text-body-md font-body-md text-on-surface-variant">New Admissions</div>
+    </div></div>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-5">
+    <div class="lg:col-span-2">
+    <div class="elevation-1 rounded-xl bg-surface-container-lowest border border-outline-variant/50 overflow-hidden">
+      <div class="flex items-center justify-between px-5 py-4 border-b border-outline-variant/50">
+        <h3 class="font-headline-md text-headline-md text-on-surface">Today's Attendance Summary</h3>
+        <div class="flex items-center gap-2"><a href="attendance-reports.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg border border-outline-variant text-on-surface-variant bg-surface-container-lowest text-label-md text-label-md hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[18px]">chevron_right</span>View Report</a></div>
+      </div>
+      <div class="p-5">
+  <div class="grid grid-cols-3 gap-4 mb-5 text-center">
+    <div><div class="font-headline-lg text-headline-lg text-on-secondary-container">1,148</div><div class="text-body-md font-body-md text-on-surface-variant">Present</div></div>
+    <div><div class="font-headline-lg text-headline-lg text-error">54</div><div class="text-body-md font-body-md text-on-surface-variant">Absent</div></div>
+    <div><div class="font-headline-lg text-headline-lg text-on-tertiary-container">42</div><div class="text-body-md font-body-md text-on-surface-variant">Late</div></div>
+  </div>
+  <div class="w-full h-2.5 rounded-full bg-surface-container-high overflow-hidden flex">
+    <div class="h-full bg-secondary" style="width:89%"></div>
+    <div class="h-full bg-tertiary-fixed-dim" style="width:4%"></div>
+    <div class="h-full bg-error" style="width:7%"></div>
+  </div>
+  <p class="text-body-md font-body-md text-on-surface-variant mt-2">94.6% attendance across all active sections today.</p>
+</div>
+    </div></div>
+    
+    <div class="elevation-1 rounded-xl bg-surface-container-lowest border border-outline-variant/50 overflow-hidden">
+      <div class="flex items-center justify-between px-5 py-4 border-b border-outline-variant/50">
+        <h3 class="font-headline-md text-headline-md text-on-surface">Student Overview</h3>
+        <div class="flex items-center gap-2"></div>
+      </div>
+      <div class="p-5">
+  <div class="space-y-3">
+    <div class="flex items-center justify-between text-body-md font-body-md"><span class="text-on-surface-variant">New Admissions (this month)</span><span class="font-semibold text-on-surface">18</span></div>
+    <div class="flex items-center justify-between text-body-md font-body-md"><span class="text-on-surface-variant">Active Students</span><span class="font-semibold text-on-surface">1,266</span></div>
+    <div class="flex items-center justify-between text-body-md font-body-md"><span class="text-on-surface-variant">Boys / Girls</span><span class="font-semibold text-on-surface">648 / 636</span></div>
+    <div class="pt-2 border-t border-outline-variant/50">
+      <div class="text-label-md text-label-md text-on-surface-variant uppercase mb-2">Students by Class (sample)</div>
+      <div class="flex items-center gap-2 mb-1.5"><span class="w-16 text-[12px] text-on-surface-variant">Grade 3</span><div class="flex-1 h-2 rounded-full bg-surface-container-high overflow-hidden"><div class="h-full bg-primary-container" style="width:72%"></div></div></div><div class="flex items-center gap-2 mb-1.5"><span class="w-16 text-[12px] text-on-surface-variant">Grade 6</span><div class="flex-1 h-2 rounded-full bg-surface-container-high overflow-hidden"><div class="h-full bg-primary-container" style="width:64%"></div></div></div><div class="flex items-center gap-2 mb-1.5"><span class="w-16 text-[12px] text-on-surface-variant">Grade 9</span><div class="flex-1 h-2 rounded-full bg-surface-container-high overflow-hidden"><div class="h-full bg-primary-container" style="width:80%"></div></div></div><div class="flex items-center gap-2 mb-1.5"><span class="w-16 text-[12px] text-on-surface-variant">Grade 12</span><div class="flex-1 h-2 rounded-full bg-surface-container-high overflow-hidden"><div class="h-full bg-primary-container" style="width:55%"></div></div></div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+    
+    <div class="elevation-1 rounded-xl bg-surface-container-lowest border border-outline-variant/50 overflow-hidden">
+      <div class="flex items-center justify-between px-5 py-4 border-b border-outline-variant/50">
+        <h3 class="font-headline-md text-headline-md text-on-surface">Fees Overview</h3>
+        <div class="flex items-center gap-2"><a href="fee-dashboard.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg border border-outline-variant text-on-surface-variant bg-surface-container-lowest text-label-md text-label-md hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[18px]">chevron_right</span>Open Fee Dashboard</a></div>
+      </div>
+      <div class="p-5">
+  <div class="grid grid-cols-2 gap-4">
+    <div><div class="text-body-md font-body-md text-on-surface-variant">Today's Collection</div><div class="font-headline-md text-headline-md text-on-surface">₹ 42,500</div></div>
+    <div><div class="text-body-md font-body-md text-on-surface-variant">Monthly Collection</div><div class="font-headline-md text-headline-md text-on-surface">₹ 8,41,200</div></div>
+    <div><div class="text-body-md font-body-md text-on-surface-variant">Pending Fees</div><div class="font-headline-md text-headline-md text-on-tertiary-container">₹ 1,92,000</div></div>
+    <div><div class="text-body-md font-body-md text-on-surface-variant">Overdue Fees</div><div class="font-headline-md text-headline-md text-error">₹ 38,400</div></div>
+  </div>
+</div>
+    </div>
+    <div class="elevation-1 rounded-xl bg-surface-container-lowest border border-outline-variant/50 overflow-hidden">
+      <div class="flex items-center justify-between px-5 py-4 border-b border-outline-variant/50">
+        <h3 class="font-headline-md text-headline-md text-on-surface">Upcoming Events</h3>
+        <div class="flex items-center gap-2"></div>
+      </div>
+      <div class="p-5">
+  <ul class="space-y-3">
+    <li class="flex items-center gap-3"><div class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex flex-col items-center justify-center text-[11px] font-semibold leading-none shrink-0"><span>18</span><span>AUG</span></div><div class="min-w-0"><div class="text-body-md font-body-md text-on-surface truncate">Mid-Term Exams Begin</div><div class="text-[12px] text-on-surface-variant">Grades 6-12 · All Sections</div></div></li><li class="flex items-center gap-3"><div class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex flex-col items-center justify-center text-[11px] font-semibold leading-none shrink-0"><span>22</span><span>AUG</span></div><div class="min-w-0"><div class="text-body-md font-body-md text-on-surface truncate">Independence Day Celebration</div><div class="text-[12px] text-on-surface-variant">Whole School · Assembly Ground</div></div></li><li class="flex items-center gap-3"><div class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex flex-col items-center justify-center text-[11px] font-semibold leading-none shrink-0"><span>29</span><span>AUG</span></div><div class="min-w-0"><div class="text-body-md font-body-md text-on-surface truncate">PTA Meeting</div><div class="text-[12px] text-on-surface-variant">Grades 1-5 · 3:00 PM</div></div></li>
+  </ul>
+</div>
+    </div>
+    <div class="elevation-1 rounded-xl bg-surface-container-lowest border border-outline-variant/50 overflow-hidden">
+      <div class="flex items-center justify-between px-5 py-4 border-b border-outline-variant/50">
+        <h3 class="font-headline-md text-headline-md text-on-surface">Recent Notices</h3>
+        <div class="flex items-center gap-2"><a href="notices.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg border border-outline-variant text-on-surface-variant bg-surface-container-lowest text-label-md text-label-md hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[18px]">chevron_right</span>View All</a></div>
+      </div>
+      <div class="p-5">
+  <ul class="divide-y divide-outline-variant/50">
+    <li class="py-3 first:pt-0 last:pb-0"><div class="flex items-start justify-between gap-2"><div><div class="text-body-md font-body-md text-on-surface font-medium">Revised Bus Timings from Monday</div><div class="text-[12px] text-on-surface-variant mt-0.5">Transport Office</div></div><span class="text-[11px] text-on-surface-variant whitespace-nowrap">2d ago</span></div></li><li class="py-3 first:pt-0 last:pb-0"><div class="flex items-start justify-between gap-2"><div><div class="text-body-md font-body-md text-on-surface font-medium">Annual Sports Day Registrations Open</div><div class="text-[12px] text-on-surface-variant mt-0.5">Physical Education Dept.</div></div><span class="text-[11px] text-on-surface-variant whitespace-nowrap">4d ago</span></div></li><li class="py-3 first:pt-0 last:pb-0"><div class="flex items-start justify-between gap-2"><div><div class="text-body-md font-body-md text-on-surface font-medium">Library Books Due for Return</div><div class="text-[12px] text-on-surface-variant mt-0.5">Library</div></div><span class="text-[11px] text-on-surface-variant whitespace-nowrap">6d ago</span></div></li>
+  </ul>
+</div>
+    </div>
+  </div>
+
+    </main>
+  </div>
+</div>
+<script src="assets/app.js"></script>
+</body></html>
